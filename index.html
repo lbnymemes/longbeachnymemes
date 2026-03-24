@@ -36,6 +36,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
 .nav-links{display:flex;gap:20px;flex-shrink:0}
 .nav-links a{font-size:13px;color:var(--dark);text-decoration:none;opacity:.7;transition:.2s}
 .nav-links a:hover{opacity:1;color:var(--blue)}
+.nav-links a.green{color:var(--green);opacity:1;font-weight:700}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;flex-shrink:0}
 .hamburger span{display:block;width:22px;height:2px;background:var(--dark);border-radius:2px;transition:.3s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -76,7 +77,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
 .product-name{font-size:12px;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:4px}
 .product-price{font-size:15px;font-weight:700;color:var(--blue)}
 .product-stars{font-size:10px;color:#f7c948;margin-bottom:3px}
-.etsy-cta{margin-top:1.5rem;text-align:center}
+.etsy-cta{margin-top:1.5rem;padding-bottom:1.5rem;text-align:center}
 .etsy-btn{display:inline-block;background:var(--dark);color:#fff;font-size:13px;font-weight:600;padding:10px 26px;border-radius:20px;text-decoration:none}
 .specials-sec{background:#fff}
 .specials-header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:1.5rem}
@@ -102,7 +103,10 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
 .sp-day-label:first-child{margin-top:0}
 .specials-cta{text-align:center;margin-top:1.25rem;font-size:12px;color:#888}
 .specials-cta a{color:var(--blue);text-decoration:none;font-weight:600}
-.sp-logo{width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1.5px solid rgba(91,200,245,0.3)}
+.sp-logo{width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1.5px solid rgba(91,200,245,0.3);display:block}
+.sp-ig{display:inline-flex;align-items:center;justify-content:center;opacity:.8;transition:.2s;text-decoration:none;margin-left:4px;flex-shrink:0;line-height:0}
+.sp-ig:hover{opacity:1}
+.sp-ig svg{display:block}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
 .gallery-cell{aspect-ratio:1;overflow:hidden;background:#2a4060}
 .gallery-cell img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}
@@ -134,7 +138,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   <div class="nav-links">
     <a href="#memes">Memes</a>
     <a href="#specials">Specials</a>
-    <a href="https://www.instagram.com/stories/highlights/18455347402039044/" target="_blank" style="color:var(--green);font-weight:700;opacity:1">This Week in LB</a>
+    <a href="https://www.instagram.com/stories/highlights/18455347402039044/" target="_blank" class="green">This Week in LB</a>
     <a href="#shop">Shop</a>
   </div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -168,6 +172,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   </svg>
 </div>
 
+<!-- MEMES SECTION -->
 <div class="sec" id="memes">
   <div class="sec-label">fresh from instagram</div>
   <div class="sec-title">Latest Selects</div>
@@ -189,6 +194,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   </div>
 </div>
 
+<!-- THIS WEEK IN LB BANNER (only one instance) -->
 <div style="position:relative;width:100%;overflow:hidden">
   <img src="https://i.imgur.com/ZdVD7d5.png" alt="This Week in LB" style="width:100%;display:block">
 </div>
@@ -206,6 +212,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   </svg>
 </div>
 
+<!-- SPECIALS SECTION -->
 <div class="sec specials-sec" id="specials">
   <div class="sec-label">eat &amp; drink local</div>
   <div class="specials-header">
@@ -242,15 +249,8 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   </svg>
 </div>
 
-<div style="position:relative;width:100%;overflow:hidden">
-  <img src="https://i.imgur.com/ZdVD7d5.png" alt="This Week in LB" style="width:100%;display:block">
-  <div style="position:absolute;bottom:0;left:0;right:0;padding:20px;text-align:center">
-    <a href="https://www.instagram.com/stories/highlights/18455347402039044/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#6CD94A;color:#1C1C3A;font-size:14px;font-weight:700;padding:12px 28px;border-radius:24px;text-decoration:none">
-      <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="igw" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="5" fill="url(#igw)"/><rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
-      See This Week in LB
-    </a>
-  </div>
-</div>
+<!-- SHOP SECTION -->
+<div class="sec shop-sec" id="shop">
   <div class="sec-label">official merch</div>
   <div class="sec-title">The LB Shop</div>
   <div class="product-grid">
@@ -291,7 +291,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
       </div>
     </a>
   </div>
-  <div class="etsy-cta" style="padding-bottom:1.5rem">
+  <div class="etsy-cta">
     <a class="etsy-btn" href="https://www.etsy.com/shop/LongBeachNYmemesShop" target="_blank">Browse All on Etsy</a>
   </div>
 </div>
@@ -303,6 +303,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   </svg>
 </div>
 
+<!-- LOGO BANNER -->
 <div style="background:var(--dark);padding:14px 20px;border-top:3px solid var(--green);border-bottom:3px solid var(--blue);display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:center;justify-items:center">
   <img src="https://i.imgur.com/nfBcDFR.png" style="width:70px;height:70px;border-radius:50%" alt="LB">
   <img src="https://i.imgur.com/nfBcDFR.png" style="width:70px;height:70px;border-radius:50%" alt="LB">
@@ -314,6 +315,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   <img src="https://i.imgur.com/nfBcDFR.png" style="width:70px;height:70px;border-radius:50%" alt="LB">
 </div>
 
+<!-- PHOTO GALLERY -->
 <div class="gallery">
   <div class="gallery-cell wide"><img src="https://i.imgur.com/PahsZaK.jpeg" alt="Long Beach NY sunset"></div>
   <div class="gallery-cell wide"><img src="https://i.imgur.com/kTmJF8s.jpeg" alt="Long Beach NY lifeguard chair"></div>
@@ -343,194 +345,205 @@ var DAY_LABELS = {weekly:'Weekly',mon:'Monday',tue:'Tuesday',wed:'Wednesday',thu
 var activeKey = 'weekly';
 
 var LOGOS = {
-  "Ananau": "https://i.imgur.com/5EgvEOw.jpeg",
-  "A Taberna": "https://i.imgur.com/pdogFeA.jpeg",
-  "Beginnings": "https://i.imgur.com/mTBfQ8b.jpeg",
-  "Beginnings": "https://www.instagram.com/beginningsrestaurant/",
-  "Billy's Beach Cafe": "https://i.imgur.com/p1HRnX0.jpeg",
-  "Borrelli's Taproom": "https://i.imgur.com/yeGgmjT.jpeg",
-  "Bright Eye Beer Co.": "https://i.imgur.com/TBToJwc.jpeg",
-  "Brixx and Barley": "https://i.imgur.com/umBvnJr.jpeg",
-  "Corazon de Cuba Taqueria": "https://i.imgur.com/dMBNGMU.png",
-  "Dough Hut": "https://i.imgur.com/Fzopbmd.jpeg",
-  "Francesco's Pizzeria": "https://i.imgur.com/maKrwrI.jpeg",
-  "Gino's": "https://i.imgur.com/pyo5RGY.png",
-  "Greek Cove": "https://i.imgur.com/Wk72Hu3.jpeg",
-  "J.A. Heneghan's Tavern": "https://i.imgur.com/45f7KKA.jpeg",
-  "Jetty": "https://i.imgur.com/IK7nS05.jpeg",
-  "JJ Cooper's": "https://i.imgur.com/pBAbRQ8.jpeg",
-  "LB Social": "https://i.imgur.com/70xRZW1.jpeg",
-  "Lido Kosher Deli": "https://i.imgur.com/LTM8Bxu.jpeg",
-  "Long Beach Coffee and Tee": "https://i.imgur.com/p5r1lvI.jpeg",
-  "Cabana": "https://i.imgur.com/UBAxjFJ.jpeg"
+  "Ananau":"https://i.imgur.com/5EgvEOw.jpeg",
+  "A Taberna":"https://i.imgur.com/pdogFeA.jpeg",
+  "Beginnings":"https://i.imgur.com/mTBfQ8b.jpeg",
+  "Billy's Beach Cafe":"https://i.imgur.com/p1HRnX0.jpeg",
+  "Borrelli's Taproom":"https://i.imgur.com/yeGgmjT.jpeg",
+  "Bright Eye Beer Co.":"https://i.imgur.com/TBToJwc.jpeg",
+  "Brixx and Barley":"https://i.imgur.com/umBvnJr.jpeg",
+  "Cabana":"https://i.imgur.com/UBAxjFJ.jpeg",
+  "Chaba Thai":"https://i.imgur.com/QeDFqEp.jpeg",
+  "Corazon de Cuba Taqueria":"https://i.imgur.com/dMBNGMU.png",
+  "Dough Hut":"https://i.imgur.com/Fzopbmd.jpeg",
+  "Francesco's Pizzeria":"https://i.imgur.com/maKrwrI.jpeg",
+  "Gino's":"https://i.imgur.com/pyo5RGY.png",
+  "Greek Cove":"https://i.imgur.com/Wk72Hu3.jpeg",
+  "J.A. Heneghan's Tavern":"https://i.imgur.com/45f7KKA.jpeg",
+  "Jetty":"https://i.imgur.com/IK7nS05.jpeg",
+  "JJ Cooper's":"https://i.imgur.com/pBAbRQ8.jpeg",
+  "LB Bistro":"https://i.imgur.com/BcqkKBc.jpeg",
+  "Lido Kosher Deli":"https://i.imgur.com/LTM8Bxu.jpeg",
+  "Long Beach Coffee and Tee":"https://i.imgur.com/p5r1lvI.jpeg",
+  "Lost at Sea":"https://i.imgur.com/OzY1Tyg.jpeg",
+  "Lost and Found":"https://i.imgur.com/OEARnrh.jpeg",
+  "Max Bialystok and Co. Bagels and Deli":"https://i.imgur.com/4ikYTmL.jpeg",
+  "Minnesota's":"https://i.imgur.com/6O8ldam.jpeg",
+  "Ra Kang":"https://i.imgur.com/R0YV2KW.jpeg",
+  "Roc and Olive":"https://i.imgur.com/Q6dEAyW.jpeg",
+  "Shore House":"https://i.imgur.com/9sf7oTR.jpeg",
+  "Shine's":"https://i.imgur.com/y44HdWm.jpeg",
+  "Swingbelly's":"https://i.imgur.com/O7Ieazr.jpeg",
+  "The Buoy Bar":"https://i.imgur.com/7nLrvpS.jpeg",
+  "The Inn":"https://i.imgur.com/Ce9jiJl.jpeg",
+  "The Saloon":"https://i.imgur.com/ajwzzOP.jpeg",
+  "Toast":"https://i.imgur.com/VLiR2NW.jpeg",
+  "West End Pizza":"https://i.imgur.com/k3HqoB3.jpeg"
 };
 
 var IG_HANDLES = {
-  "Ananau": "https://www.instagram.com/ananauny/",
-  "A Taberna": "https://www.instagram.com/a_taberna_restaurant/",
-  "Billy's Beach Cafe": "https://www.instagram.com/billysbeachcafe_/",
-  "Borrelli's Taproom": "https://www.instagram.com/borrellislongbeach/",
-  "Bright Eye Beer Co.": "https://www.instagram.com/brighteyebeer/",
-  "Brixx and Barley": "https://www.instagram.com/brixxandbarley/",
-  "Dough Hut": "https://www.instagram.com/doughhutlb/",
-  "Francesco's Pizzeria": "https://www.instagram.com/francescoslongbeach/",
-  "Greek Cove": "https://www.instagram.com/greekcove/",
-  "The Inn": "https://www.instagram.com/theinnlbny/",
-  "LB Social": "https://www.instagram.com/lbsocialny/",
-  "Lido Kosher Deli": "https://www.instagram.com/lidokosherdeli/",
-  "Long Beach Coffee and Tee": "https://www.instagram.com/longbeachcoffeeandtee/",
-  "Max Bialystok and Co. Bagels and Deli": "https://www.instagram.com/maxbialystokandcompany/",
-  "Minnesota's": "https://www.instagram.com/minnesotaslongbeach/",
-  "Ra Kang": "https://i.imgur.com/R0YV2KW.jpeg",
-  "Chaba Thai": "https://i.imgur.com/QeDFqEp.jpeg",
-  "Roc and Olive": "https://www.instagram.com/rocandolive/",
-  "Shore House": "https://www.instagram.com/shorehouselb/",
-  "Swingbelly's": "https://www.instagram.com/swingbellyslongbeach/",
-  "Toast": "https://www.instagram.com/toastcoffeeandkitchen/",
-  "West End Pizza": "https://www.instagram.com/westendpizza_lbny/",
-  "Cabana": "https://www.instagram.com/cabanalbny/",
-  "Jetty": "https://www.instagram.com/jettylbny/",
-  "Corazon de Cuba Taqueria": "https://www.instagram.com/corazon_de_cuba/",
-  "Gino's": "https://www.instagram.com/ginos/",
-  "J.A. Heneghan's Tavern": "https://www.instagram.com/heneghanstavern/",
-  "JJ Cooper's": "https://www.instagram.com/jjcooperslbny/",
-  "The Saloon": "https://www.instagram.com/thesaloonlb/",
-  "The Buoy Bar": "https://www.instagram.com/thebuoybar/",
-  "Lost at Sea": "https://www.instagram.com/lostatsealbny/",
-  "Lost and Found": "https://www.instagram.com/lostandfoundlbny/",
+  "Ananau":"https://www.instagram.com/ananauny/",
+  "A Taberna":"https://www.instagram.com/a_taberna_restaurant/",
+  "Beginnings":"https://www.instagram.com/beginningsrestaurant/",
+  "Billy's Beach Cafe":"https://www.instagram.com/billysbeachcafe_/",
+  "Borrelli's Taproom":"https://www.instagram.com/borrellislongbeach/",
+  "Bright Eye Beer Co.":"https://www.instagram.com/brighteyebeer/",
+  "Brixx and Barley":"https://www.instagram.com/brixxandbarley/",
+  "Cabana":"https://www.instagram.com/cabanalbny/",
+  "Corazon de Cuba Taqueria":"https://www.instagram.com/corazon_de_cuba/",
+  "Dough Hut":"https://www.instagram.com/doughhutlb/",
+  "Francesco's Pizzeria":"https://www.instagram.com/francescoslongbeach/",
+  "Gino's":"https://www.instagram.com/ginos/",
+  "Greek Cove":"https://www.instagram.com/greekcove/",
+  "J.A. Heneghan's Tavern":"https://www.instagram.com/heneghanstavern/",
+  "Jetty":"https://www.instagram.com/jettylbny/",
+  "JJ Cooper's":"https://www.instagram.com/jjcooperslbny/",
+  "LB Bistro":"https://www.instagram.com/lbbistrony/",
+  "Lido Kosher Deli":"https://www.instagram.com/lidokosherdeli/",
+  "Long Beach Coffee and Tee":"https://www.instagram.com/longbeachcoffeeandtee/",
+  "Lost at Sea":"https://www.instagram.com/lostatsealbny/",
+  "Lost and Found":"https://www.instagram.com/lostandfoundlbny/",
+  "Max Bialystok and Co. Bagels and Deli":"https://www.instagram.com/maxbialystokandcompany/",
+  "Minnesota's":"https://www.instagram.com/minnesotaslongbeach/",
+  "Roc and Olive":"https://www.instagram.com/rocandolive/",
+  "Shore House":"https://www.instagram.com/shorehouselb/",
+  "Shine's":"https://www.instagram.com/shinesbar/",
+  "Swingbelly's":"https://www.instagram.com/swingbellyslongbeach/",
+  "The Buoy Bar":"https://www.instagram.com/thebuoybar/",
+  "The Inn":"https://www.instagram.com/theinnlbny/",
+  "The Saloon":"https://www.instagram.com/thesaloonlb/",
+  "Toast":"https://www.instagram.com/toastcoffeeandkitchen/",
+  "West End Pizza":"https://www.instagram.com/westendpizza_lbny/"
 };
 
 var IG_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="igg" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="5" fill="url(#igg)"/><rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>';
 
 var specials = {
   weekly:[
-    {place:"Ananau",badge:"Mon-Fri",deals:["Lunch specials 11AM-3PM","Daily specials $12.95-$16.95 includes beer, wine, or sangria"]},
-    {place:"A Taberna",badge:"Mon-Sun",deals:["Happy hour Mon-Fri 4-6PM, Sat-Sun 1-5PM","$8 cocktails, $10 martinis, $15/$24 sangria pitchers, $8 appetizers","Early bird prix fixe: appetizer + main for $35/person"]},
+    {place:"Ananau",badge:"Mon-Fri",deals:["Lunch specials 11 AM-3 PM","Daily specials $12.95-$16.95 includes beer, wine, or sangria"]},
+    {place:"A Taberna",badge:"Mon-Sun",deals:["Happy hour Mon-Fri 4-6 PM, Sat-Sun 1-5 PM","$8 cocktails, $10 martinis, $15/$24 sangria pitchers, $8 appetizers","Early bird prix fixe: appetizer + main for $35/person"]},
     {place:"Beginnings",badge:"Tue-Sun",deals:["Family-style specials $60-$68, feeds up to four people","Pickup or delivery only","Check website for weekly themed movie, music, TV and literature dinners"]},
-    {place:"Billy's Beach Cafe",badge:"7 Days",deals:["BOGO drinks 4-7PM every day, $6 glasses of wine","Mon-Thu from 5PM: half-price starters and sliders, $14 cocktails, bucket specials","Mon-Fri 12-3PM: $12 lunch specials (wings, tacos, burger, quesadilla + fries)"]},
-    {place:"Borrelli's Taproom",badge:"Mon-Fri",deals:["Happy hour 3-6PM","$10 dishes: pretzel, mozzarella sticks, zucchini, meatballs, wings, shrimp cocktail, pizza","Drinks: Peroni $5, High Noon $6, Narragansett $4, Miller Lite $4, Drafts $6, Well drinks $8"]},
-    {place:"Bright Eye Beer Co.",badge:"Tue-Fri",deals:["Happy hour 4-6PM","$6 pints on all drafts"]},
-    {place:"Brixx and Barley",badge:"NFL Games",deals:["During all NFL games on Sundays, Mondays and Thursdays","$45 deal: unlimited pizza and select draft beers","$5 select drafts, $4 Miller Lite cans, 6 for $35 Sun Cruiser, 6 for $40 High Noon buckets"]},
-    {place:"Chaba Thai",badge:"Mon-Fri",logo:"https://i.imgur.com/QeDFqEp.jpeg",deals:["$10.95 lunch special","Includes 14 different dish options"]},
+    {place:"Billy's Beach Cafe",badge:"7 Days",deals:["BOGO drinks 4-7 PM every day, $6 glasses of wine","Mon-Thu from 5 PM: half-price starters and sliders, $14 cocktails, bucket specials","Mon-Fri 12-3 PM: $12 lunch specials (wings, tacos, burger, quesadilla + fries)"]},
+    {place:"Borrelli's Taproom",badge:"Mon-Fri",deals:["Happy hour 3-6 PM","$10 dishes: pretzel, mozzarella sticks, zucchini, meatballs, wings, shrimp cocktail, pizza","Drinks: Peroni $5, High Noon $6, Narragansett $4, Miller Lite $4, Drafts $6, Well drinks $8"]},
+    {place:"Bright Eye Beer Co.",badge:"Tue-Fri",deals:["Happy hour 4-6 PM","$6 pints on all drafts"]},
+    {place:"Brixx and Barley",badge:"NFL Games",deals:["During all NFL games on Sundays, Mondays and Thursdays","$45 deal: unlimited pizza and select draft beers","$5 select drafts, $4 Miller Lite cans, 6 for $35 Sun Cruiser, 6 for $40 High Noon buckets","<span style=\"color:#e02020;font-weight:700\">Only available during the NFL season</span>"]},
+    {place:"Chaba Thai",badge:"Mon-Fri",deals:["$10.95 lunch special","Includes 14 different dish options"]},
     {place:"Dough Hut",badge:"7 Days",deals:["Coffee punch card: buy six coffees, get the seventh free","One punch per visit only"]},
-    {place:"Francesco's Pizzeria",badge:"Mon-Thu",deals:["Lunch specials 11AM-3PM","$10 options: penne alla vodka, caesar salad, baked ziti, any hero, personal cheese pizza","Chicken strips (BBQ, buffalo, or garlic parm) with fountain soda"]},
-    {place:"Greek Cove",badge:"Mon-Fri",deals:["Large selection of lunch specials 11AM-3PM","Pickup only, not available for delivery"]},
-    {place:"The Inn",badge:"Mon-Fri",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["Half-price happy hour 4-7PM","Friday extended happy hour 7-11PM: $4 Coors Light, $5 Coronas, $6 Dos Hombres, $7 Surfsides","2-for-1 entrees on Fridays"]},
+    {place:"Francesco's Pizzeria",badge:"Mon-Thu",deals:["Lunch specials 11 AM-3 PM","$10 options: penne alla vodka, caesar salad, baked ziti, any hero, personal cheese pizza","Chicken strips (BBQ, buffalo, or garlic parm) with fountain soda"]},
+    {place:"Greek Cove",badge:"Mon-Fri",deals:["Large selection of lunch specials 11 AM-3 PM","Pickup only, not available for delivery"]},
+    {place:"The Inn",badge:"Happy Hour",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["Half-price happy hour 4-7 PM Monday through Friday","Friday extended happy hour 7 to 10 PM: $5 Coors Light pints, $6 Coronas, $7 Deep Eddy Vodkas"]},
     {place:"LB Social",badge:"Daily",deals:["Alternating daily specials menu, check with them for today's offering"]},
-    {place:"Lido Kosher Deli",badge:"7 Days",deals:["Lunch specials 11AM-3PM every day","$15.95 Lunch Special: cup of soup + mini sandwich on kaiser roll or rye","$15.95 Weight Watchers Luncheon: vegetable soup + 2oz turkey sandwich on thin rye"]},
-    {place:"Long Beach Coffee and Tee",badge:"Mon-Fri",deals:["Morning Wood Golf 7AM-12PM","$15 for a cup of coffee and 15 minutes of golf on the simulator"]},
+    {place:"Lido Kosher Deli",badge:"7 Days",deals:["Lunch specials 11 AM-3 PM every day","$15.95 Lunch Special: cup of soup + mini sandwich on kaiser roll or rye","$15.95 Weight Watchers Luncheon: vegetable soup + 2oz turkey sandwich on thin rye"]},
+    {place:"Long Beach Coffee and Tee",badge:"Mon-Fri",deals:["Morning Wood Golf 7 AM-12 PM","$15 for a cup of coffee and 15 minutes of golf on the simulator"]},
     {place:"Max Bialystok and Co. Bagels and Deli",badge:"7 Days",logo:"https://i.imgur.com/4ikYTmL.jpeg",deals:["Buy 3 yogurt muffins, get one free (walk-in only)","Buy $25+ in gift cards, get 5 bagels free (walk-in only)","$25 for 96oz box of hot coffee (10-12 cups, stirrers, sugars, milk)","Mon-Wed: buy 1lb Boar's Head cold cuts and cheese, get 6 bagels free (walk-in only)"]},
-    {place:"Minnesota's",badge:"Mon-Fri",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["Happy hour 4-8PM: half off beer taps and appetizers","NFL Sports Ticket: $42.95 unlimited tailgate menu for duration of game"]},
-    {place:"Ra Kang",badge:"Mon-Fri",logo:"https://i.imgur.com/R0YV2KW.jpeg",deals:["Lunch specials with menu items ranging from $10.95-$11.95"]},
-    {place:"Roc and Olive",badge:"Mon-Fri",logo:"https://i.imgur.com/Q6dEAyW.jpeg",deals:["Happy hour 4-7PM at bar only","$5 select beers: Budweiser, Bud Light, Coors Light, Estrella, Miller Lite, Yuengling, Draft of the Day","$10 bar bites: oysters, wings, flatbread, truffle-parm fries, coconut shrimp, stuffed pretzels"]},
-    {place:"Shore House",badge:"Mon-Fri",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Happy hour 2-7PM at bar only, $2 off all drinks","$8 bites: Swedish meatballs, stuffed mushrooms, bacon-wrapped shrimp, empanadas, tuna, chicken satay"]},
-    {place:"Swingbelly's",badge:"Mon-Fri",logo:"https://i.imgur.com/O7Ieazr.jpeg",deals:["Happy hour 4-7PM","$5 all beer taps, $5 all food apps","$20 any BBQ sandwich (with fries, pickle and slaw) + a Foster's 25oz can"]},
-    {place:"Toast",badge:"Mon-Thu",logo:"https://i.imgur.com/VLiR2NW.jpeg",deals:["Early Riser 8-10AM","Choice of entree with regular coffee for $11.95","Add a classic mimosa for $8"]},
+    {place:"Minnesota's",badge:"Mon-Fri",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["Happy hour 4-8 PM: half off beer taps and appetizers","NFL Sports Ticket: $42.95 unlimited tailgate menu for duration of game"]},
+    {place:"Ra Kang",badge:"Mon-Fri",deals:["Lunch specials with menu items ranging from $10.95-$11.95"]},
+    {place:"Roc and Olive",badge:"Mon-Fri",logo:"https://i.imgur.com/Q6dEAyW.jpeg",deals:["Happy hour 4-7 PM at bar only","$5 select beers: Budweiser, Bud Light, Coors Light, Estrella, Miller Lite, Yuengling, Draft of the Day","$10 bar bites: oysters, wings, flatbread, truffle-parm fries, coconut shrimp, stuffed pretzels"]},
+    {place:"Shore House",badge:"Mon-Fri",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Happy hour 2-7 PM at bar only, $2 off all drinks","$8 bites: Swedish meatballs, stuffed mushrooms, bacon-wrapped shrimp, empanadas, tuna, chicken satay"]},
+    {place:"Swingbelly's",badge:"Mon-Fri",logo:"https://i.imgur.com/O7Ieazr.jpeg",deals:["Happy hour 4-7 PM","$5 all beer taps, $5 all food apps","$20 any BBQ sandwich (with fries, pickle and slaw) + a Foster's 25oz can"]},
+    {place:"Toast",badge:"Mon-Thu",logo:"https://i.imgur.com/VLiR2NW.jpeg",deals:["Early Riser 8-10 AM","Choice of entree with regular coffee for $11.95","Add a classic mimosa for $8"]},
     {place:"West End Pizza",badge:"Mon-Fri",logo:"https://i.imgur.com/k3HqoB3.jpeg",deals:["Lunch specials available Mon-Fri","Entree, pasta, and hero options from $9.95-$15.95"]}
   ],
   mon:[
-    {place:"Brixx and Barley",badge:"Burger Monday",deals:["$5 smash burger with lettuce and tomato on homemade piada bun","+$1 add-ons: bacon, American cheese, mozzarella, cheddar, gruyere","+$2.50 add-ons: fries, sweet potato fries, tater tots. +$5: loaded fries or loaded tater tots"]},
-    {place:"Cabana",badge:"Pop-Up Monday",deals:["Local food vendor trucks and craft vendors starting at 4PM","Live music starting at 6PM"]},
-    {place:"Jetty",badge:"Volleyball",deals:["Beach volleyball league specials 8-10PM","Buckets (6x cans): Surfside $42, High Noon $42, Corona $36, Sun Cruiser $36"]},
-    {place:"Long Beach Coffee and Tee",badge:"Mulligan Monday",deals:["Half-price golf with 1hr minimum","Must tee off before 4PM"]},
+    {place:"Brixx and Barley",badge:"Burger Monday",deals:["$6 smash burger with lettuce and tomato on homemade piada bun","+$1 add-ons: bacon, American cheese, mozzarella, cheddar, gruyere","+$2.50 add-ons: fries, sweet potato fries, tater tots. +$5: loaded fries or loaded tater tots"]},
+    {place:"Cabana",badge:"Pop-Up Monday",deals:["Local food vendor trucks and craft vendors starting at 4 PM","Live music starting at 6 PM"]},
+    {place:"Jetty",badge:"Volleyball",deals:["Beach volleyball league specials 8-10 PM","Buckets (6x cans): Surfside $42, High Noon $42, Corona $36, Sun Cruiser $36"]},
+    {place:"Long Beach Coffee and Tee",badge:"Mulligan Monday",deals:["Half-price golf with 1hr minimum","Must tee off before 4 PM"]},
     {place:"Minnesota's",badge:"Football",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["Unlimited tailgate menu for duration of game for $42.95","Available during football season only"]},
-    {place:"Shore House",badge:"Trivia Night",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Trivia night starting at 7PM","Themes updated on the Shore House website"]},
+    {place:"Shore House",badge:"Trivia Night",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Trivia night starting at 7 PM","Themes updated on the Shore House website"]},
     {place:"Swingbelly's",badge:"Mexican Monday",logo:"https://i.imgur.com/O7Ieazr.jpeg",deals:["$3 tacos and $8 nachos","$10 monster margaritas"]}
   ],
   tue:[
-    {place:"Billy's Beach Cafe",badge:"Taco Tuesday",deals:["Taco Tuesdays 5-11PM","$5 Coronas and Cuervo Gold Margaritas","Jalapeno poppers, nachos, tacos, quesadillas, Mexican burger sliders all $8"]},
-    {place:"Brixx and Barley",badge:"Taqueria Tuesday",deals:["Taqueria Tuesdays starting at 5PM","Special taqueria-style menu and small plate chef specials","$7 margaritas, $5 Coronas"]},
+    {place:"Billy's Beach Cafe",badge:"Taco Tuesday",deals:["Taco Tuesdays 5-11 PM","$5 Coronas and Cuervo Gold Margaritas","Jalapeno poppers, nachos, tacos, quesadillas, Mexican burger sliders all $8"]},
+    {place:"Brixx and Barley",badge:"Taqueria Tuesday",deals:["Taqueria Tuesdays starting at 5 PM","Special taqueria-style menu and small plate chef specials","$7 margaritas, $5 Coronas"]},
     {place:"Cabana",badge:"Taco Tuesday",deals:["$1 tacos all day and night","Two-drink minimum"]},
     {place:"Corazon de Cuba Taqueria",badge:"Taco Tuesday",deals:["$3 tacos: pescadito, carne asada, pollito, carnitas, al pastor, chorizo, vegan"]},
     {place:"Gino's",badge:"Double Rewards",deals:["All reward points earned are doubled on Tuesdays"]},
     {place:"The Inn",badge:"Tacos and Tequila",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["$2 hard or soft shell tacos: chicken, beef, pinto bean, or black bean","$5 Coronas and Corona Lights","$4 house tequilas, $5 Milagros, $6 Dos Hombres"]},
     {place:"J.A. Heneghan's Tavern",badge:"Taco Tuesday",deals:["$6 tacos or mix and match 3 for $14","Drink specials: JA's Margaritas, Skinny Strawberry Margaritas, and Tequila Mule"]},
-    {place:"Jetty",badge:"Volleyball",deals:["Beach volleyball league specials 8-10PM","Buckets (6x cans): Surfside $42, High Noon $42, Corona $36, Sun Cruiser $36"]},
+    {place:"Jetty",badge:"Volleyball",deals:["Beach volleyball league specials 8-10 PM","Buckets (6x cans): Surfside $42, High Noon $42, Corona $36, Sun Cruiser $36"]},
     {place:"JJ Cooper's",badge:"Taco Tuesday",deals:["Extensive corn or flour taco menu with Mexican small plates","$6 margaritas, $5 Coronas"]},
-    {place:"Long Beach Coffee and Tee",badge:"Back 9 Tuesday",deals:["Half-price golf for seniors until 4PM","One hour minimum"]},
+    {place:"Long Beach Coffee and Tee",badge:"Back 9 Tuesday",deals:["Half-price golf for seniors until 4 PM","One hour minimum"]},
     {place:"Minnesota's",badge:"Taco Tuesday",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["$3 tacos","Half-priced margaritas all night"]},
     {place:"Roc and Olive",badge:"Taco Tuesday",logo:"https://i.imgur.com/Q6dEAyW.jpeg",deals:["3 tacos for $12, mix and match 3 for $14 (mushroom, chicken, cauliflower, chorizo, shrimp, short rib)","$6 spicy and house margaritas","$6 Corona, Corona Light, Pacifico, Negra Modelo bottles"]},
-    {place:"The Saloon",badge:"Burger Tuesday",logo:"https://i.imgur.com/ajwzzOP.jpeg",deals:["Several $20 burger options with choice of side, 12-9PM","$4 Michelob ULTRA and Miller Lite cans before 4PM"]},
+    {place:"The Saloon",badge:"Burger Tuesday",logo:"https://i.imgur.com/ajwzzOP.jpeg",deals:["Several $20 burger options with choice of side, 12-9 PM","$4 Michelob ULTRA and Miller Lite cans before 4 PM"]},
     {place:"Shore House",badge:"Taco Tuesday",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Tacos: ground beef $2, fish $3, short rib birria $4, grilled chicken $4","Nachos $12 with meat add-ons available","$6 margaritas, $5 Milagro shots, $5 Coronas, $6 Modelos"]},
     {place:"Swingbelly's",badge:"Fried Chicken Night",logo:"https://i.imgur.com/O7Ieazr.jpeg",deals:["5-piece through 24-piece family feast buckets from $19.99-$79.99"]}
   ],
   wed:[
     {place:"Borrelli's Taproom",badge:"Wine Down",deals:["Half-priced bottles of wine all night"]},
-    {place:"Brixx and Barley",badge:"Wing Wednesday",deals:["Wing Wednesday starting at 5PM","Half price on boned and boneless wings"]},
-    {place:"The Buoy Bar",badge:"Mussel Special",logo:"https://i.imgur.com/7nLrvpS.jpeg",deals:["Half-priced mussels all day","Options: white wine and garlic, marinara, spicy diavolo, or buffalo style"]},
-    {place:"The Inn",badge:"Burger Night",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["$5 burgers from 4PM until kitchen closes","$5 Blue Point drafts, NUTRL Seltzers, and Green Tea Shots"]},
+    {place:"Brixx and Barley",badge:"Wing Wednesday",deals:["Wing Wednesday starting at 5 PM","Half price on boned and boneless wings"]},
+    {place:"The Buoy Bar",badge:"Mussel Special",deals:["Half-priced mussels all day","Options: white wine and garlic, marinara, spicy diavolo, or buffalo style"]},
+    {place:"The Inn",badge:"Burger Night",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["$5 burgers from 4 PM until kitchen closes","Served with lettuce, tomato, and pickle; additional toppings available for purchase","$4 Michelob ULTRAs, $5 Blue Points, $5 Green Tea Shots, $6 NUTRL Seltzers"]},
     {place:"J.A. Heneghan's Tavern",badge:"Wine Down",deals:["Half-priced bottles of wine all night"]},
     {place:"JJ Cooper's",badge:"Wine Down",deals:["25% off all wine bottles"]},
-    {place:"Lost at Sea",badge:"Happy Hour",logo:"https://i.imgur.com/OzY1Tyg.jpeg",deals:["$2 oysters and $10 select cocktails","Available 5:30-6:30PM"]},
-    {place:"Minnesota's",badge:"Trivia Night",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["$30 all-you-can-eat wings with Modelo beer specials","Trivia starting at 8PM"]},
+    {place:"Lost at Sea",badge:"Happy Hour",logo:"https://i.imgur.com/OzY1Tyg.jpeg",deals:["$2 oysters and $10 select cocktails","Available 5:30-6:30 PM"]},
+    {place:"Minnesota's",badge:"Trivia Night",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["$30 all-you-can-eat wings with Modelo beer specials","Trivia starting at 8 PM"]},
     {place:"Shore House",badge:"BOGO Entrees",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Buy one entree, get one free","Options: roasted half chicken, chicken and chorizo pasta, 10oz NY strip, orange miso salmon, chili-rubbed skirt steak"]},
     {place:"Swingbelly's",badge:"Slider Wednesday",logo:"https://i.imgur.com/O7Ieazr.jpeg",deals:["$3 sliders all night"]}
   ],
   thu:[
-    {place:"Brixx and Barley",badge:"Ladies Night",deals:["Ladies Night 5PM to close","Half-priced drinks for women","Chef's tasting plates available"]},
-    {place:"The Inn",badge:"Raw Bar Night",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["99 cent jumbo shrimp, 75 cent wings, $1.29 clams, $1.49 oysters, $9.99 mussel bowls","$6 Twisted Teas, $5 Sam Adams drafts, Deep Eddy Vodka and Red Bull specials"]},
-    {place:"Jetty",badge:"Thirsty Thursday",deals:["Buy two tacos, get a free margarita","Available 4-9PM"]},
+    {place:"LB Bistro",badge:"Burger Night",deals:["$10 burger night","Available at the bar and in the dining room","Add fries or side salad for $8"]},
+    {place:"Brixx and Barley",badge:"Ladies Night",deals:["Ladies Night 5 PM to close","Select wines and drinks are $5 for women","Chef's tasting plates available"]},
+    {place:"The Inn",badge:"Raw Bar Night",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["99 cent jumbo shrimp, $1.29 clams, $1.49 oysters, and $9.99 mussel bowls","$5 Sam Adams pints, $6 Twisted Teas, $7 Sun Cruisers"]},
+    {place:"Jetty",badge:"Thirsty Thursday",deals:["Buy two tacos, get a free margarita","Available 4-9 PM"]},
     {place:"JJ Cooper's",badge:"Steak Night",deals:["$39 steak night: salad, steak, and choice of two sides"]},
-    {place:"Lost at Sea",badge:"Happy Hour",logo:"https://i.imgur.com/OzY1Tyg.jpeg",deals:["$2 oysters and $10 select cocktails","Available 5-6PM"]},
+    {place:"Lost at Sea",badge:"Happy Hour",logo:"https://i.imgur.com/OzY1Tyg.jpeg",deals:["$2 oysters and $10 select cocktails","Available 5-6 PM"]},
     {place:"Roc and Olive",badge:"Thirsty Thursday",logo:"https://i.imgur.com/Q6dEAyW.jpeg",deals:["$25 select bottles of wine","Or 25% off entire wine bottle list"]},
     {place:"The Saloon",badge:"Prime Rib Night",logo:"https://i.imgur.com/ajwzzOP.jpeg",deals:["Prime rib with soup or salad and choice of side","Half-off bottles of wine with dinner"]},
-    {place:"Shore House",badge:"Music Bingo",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Weekly themed music bingo every Thursday at 7PM","Themes updated on Shore House website"]},
+    {place:"Shore House",badge:"Music Bingo",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Weekly themed music bingo every Thursday at 7 PM","Themes updated on Shore House website"]},
     {place:"Swingbelly's",badge:"Cans and Ribs Night",logo:"https://i.imgur.com/O7Ieazr.jpeg",deals:["All cans $4, orders of rib tips $4"]}
   ],
   fri:[
-    {place:"Brixx and Barley",badge:"Happy Hour",deals:["Happy hour 3-7PM with assorted drink specials"]},
-    {place:"The Inn",badge:"Extended Happy Hour",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["Extended happy hour 7-11PM: $4 Coors Light, $5 Coronas, $6 Dos Hombres, $7 Surfsides","2-for-1 entrees all night"]},
-    {place:"Jetty",badge:"Teacher Appreciation",deals:["Half-price small plates and half-price drinks starting at 3PM"]},
-    {place:"Lost at Sea",badge:"Happy Hour",logo:"https://i.imgur.com/OzY1Tyg.jpeg",deals:["$2 oysters and $10 select cocktails","Available 5-6PM"]},
+    {place:"Brixx and Barley",badge:"Happy Hour",deals:["Happy hour 1-7 PM with assorted drink specials"]},
+    {place:"The Inn",badge:"Extended Happy Hour",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["Half-price happy hour 4-7 PM","Friday extended happy hour 7 to 10 PM: $5 Coors Light pints, $6 Coronas, $7 Deep Eddy Vodkas"]},
+    {place:"Jetty",badge:"Teacher Appreciation",deals:["Half-price small plates and half-price drinks starting at 3 PM"]},
+    {place:"Lost at Sea",badge:"Happy Hour",logo:"https://i.imgur.com/OzY1Tyg.jpeg",deals:["$2 oysters and $10 select cocktails","Available 5-6 PM"]},
     {place:"Minnesota's",badge:"Live Music",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["Live music every Friday","Check Instagram for availability and schedule"]},
-    {place:"Shine's",badge:"BOGO Happy Hour",logo:"https://i.imgur.com/y44HdWm.jpeg",deals:["Buy one get one 4-7PM","Includes free food and snacks"]}
+    {place:"Shine's",badge:"BOGO Happy Hour",logo:"https://i.imgur.com/y44HdWm.jpeg",deals:["Buy one get one 4-7 PM","Includes free food and snacks"]}
   ],
   sat:[
-    {place:"Billy's Beach Cafe",badge:"Bottomless Brunch",deals:["Bottomless brunch 12-3PM","Add-on $24: Bloody Mary, Mimosa, screwdriver, and domestic tap beer"]},
-    {place:"Brixx and Barley",badge:"Bottomless Brunch",deals:["Bottomless brunch 11AM-3PM, $20 with purchase of a brunch entree","Drink options: Bloody Marys, Mimosa, screwdriver, or Brixx Lager"]},
-    {place:"Cabana",badge:"Bottomless Brunch",deals:["Two-hour bottomless brunch 12-3PM","$35.99 per person"]},
-    {place:"The Inn",badge:"College Football",deals:["The Inn Zone: $4 Heineken, Heineken Light and Amstel Light","$5 Kona drafts, NUTRL Seltzers, Fireball shots, 75 cent wings","Available during college football season only"]},
-    {place:"Jetty",badge:"Bottomless Brunch",deals:["Bottomless brunch 12-3PM","DJ Frankie Sims from 9PM to close"]},
-    {place:"Shore House",badge:"Brunch",deals:["Brunch 11AM-3PM","All brunch entrees include a complimentary Bloody Mary, Mimosa, or Shore House Lager Draft"]}
+    {place:"Billy's Beach Cafe",badge:"Bottomless Brunch",deals:["Bottomless brunch 12-3 PM","Add-on $24: Bloody Mary, Mimosa, screwdriver, and domestic tap beer"]},
+    {place:"Brixx and Barley",badge:"Bottomless Brunch",deals:["Bottomless brunch 11 AM-3 PM, $20 with purchase of a brunch entree","Drink options: Bloody Marys, Mimosa, screwdriver, or Brixx Lager"]},
+    {place:"Cabana",badge:"Bottomless Brunch",deals:["Two-hour bottomless brunch 12-3 PM","$35.99 per person"]},
+    {place:"The Inn",badge:"College Football",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["The Inn Zone: $4 Heineken, Heineken Light and Amstel Light","$5 Kona drafts, NUTRL Seltzers, Fireball shots, 75 cent wings","<span style=\"color:#e02020;font-weight:700\">Available during college football season only</span>"]},
+    {place:"The Inn",badge:"College Basketball",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["The Inn Zone College Basketball Saturdays","$4 Michelob ULTRAs, $5 Kona Big Wave pints, $6 NUTRL Vodka cans","75 cent wings, $10 tailgate menu","Bucket Specials: $25 domestic beers, $30 imported beers, $35 vodka cans","<span style=\"color:#e02020;font-weight:700\">College basketball special available during college basketball season only</span>"]},
+    {place:"Jetty",badge:"Bottomless Brunch",deals:["Bottomless brunch 12-3 PM","DJ Frankie Sims from 9 PM to close"]},
+    {place:"Shore House",badge:"Brunch",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Brunch 11 AM-3 PM","All brunch entrees include a complimentary Bloody Mary, Mimosa, or Shore House Lager Draft"]}
   ],
   sun:[
-    {place:"Billy's Beach Cafe",badge:"Bottomless Brunch",deals:["Bottomless brunch 12-3PM","Add-on $24: Bloody Mary, Mimosa, screwdriver, and domestic tap beer"]},
-    {place:"Brixx and Barley",badge:"NFL Sunday",deals:["$45 unlimited pizza and select draft beers during all NFL games","$5 select drafts, $4 Miller Lite cans, 6 for $35 Sun Cruiser, 6 for $40 High Noon buckets","Bottomless brunch 11AM-3PM, $20 with brunch entree"]},
-    {place:"Cabana",badge:"Bottomless Brunch",deals:["Two-hour bottomless brunch 12-3PM, $35.99 per person"]},
-    {place:"The Inn",badge:"Summer and NFL",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["Summer Sundays: $5 Michelob ULTRA, $6 Kona Big Wave, $7 NUTRL Seltzers, live music","NFL Sundays: $4 Coors Light, $5 Fireball shots, $6 NUTRL Seltzers, 75 cent wings, game day menu"]},
-    {place:"Jetty",badge:"Brunch",deals:["Boozy brunch 12-3PM"]},
-    {place:"Lost and Found",badge:"Brunch",logo:"https://i.imgur.com/OEARnrh.jpeg",deals:["Brunch available 11AM-3PM"]},
+    {place:"Billy's Beach Cafe",badge:"Bottomless Brunch",deals:["Bottomless brunch 12-3 PM","Add-on $24: Bloody Mary, Mimosa, screwdriver, and domestic tap beer"]},
+    {place:"Brixx and Barley",badge:"NFL Sunday",deals:["$45 unlimited pizza and select draft beers during all NFL games","$5 select drafts, $4 Miller Lite cans, 6 for $35 Sun Cruiser, 6 for $40 High Noon buckets","Bottomless brunch 11 AM-3 PM, $20 with brunch entree","<span style=\"color:#e02020;font-weight:700\">Only available during the NFL season</span>"]},
+    {place:"Cabana",badge:"Bottomless Brunch",deals:["Two-hour bottomless brunch 12-3 PM, $35.99 per person"]},
+    {place:"The Inn",badge:"Summer and NFL",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["Summer Sundays: $5 Michelob ULTRA, $6 Kona Big Wave, $7 NUTRL Seltzers, live music","NFL Sundays: $4 Coors Light, $5 Fireball shots, $6 NUTRL Seltzers, 75 cent wings, game day menu","<span style=\"color:#e02020;font-weight:700\">NFL special only available during NFL season</span>"]},
+    {place:"Jetty",badge:"Brunch",deals:["Boozy brunch 12-3 PM"]},
+    {place:"Lost and Found",badge:"Brunch",logo:"https://i.imgur.com/OEARnrh.jpeg",deals:["Brunch available 11 AM-3 PM"]},
     {place:"Minnesota's",badge:"Sunday Funday",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["Brunch specials all day","$5 Coronas and Corona Premier"]},
-    {place:"Roc and Olive",badge:"Brunch",logo:"https://i.imgur.com/Q6dEAyW.jpeg",deals:["Brunch 12-3:30PM, $5 cocktail specials"]},
-    {place:"Shore House",badge:"Brunch",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Brunch 11AM-3PM","All brunch entrees include a complimentary Bloody Mary, Mimosa, or Shore House Lager Draft"]},
-    {place:"Swingbelly's",badge:"BBQ Brunch",logo:"https://i.imgur.com/O7Ieazr.jpeg",deals:["BBQ brunch served 11AM-3PM"]}
+    {place:"Roc and Olive",badge:"Brunch",logo:"https://i.imgur.com/Q6dEAyW.jpeg",deals:["Brunch 12-3:30 PM, $5 cocktail specials"]},
+    {place:"Shore House",badge:"Brunch",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["Brunch 11 AM-3 PM","All brunch entrees include a complimentary Bloody Mary, Mimosa, or Shore House Lager Draft"]},
+    {place:"Swingbelly's",badge:"BBQ Brunch",logo:"https://i.imgur.com/O7Ieazr.jpeg",deals:["BBQ brunch served 11 AM-3 PM"]}
   ]
 };
 
+function formatTime(t){return t.replace(/(\d)(AM|PM)/g,'$1 $2')}
 function escapeRegex(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
 function highlight(text,q){if(!q)return text;return text.replace(new RegExp('('+escapeRegex(q)+')','gi'),'<mark style="background:#fff3b0;border-radius:2px;padding:0 1px">$1</mark>')}
 
-function formatTime(text) {
-  return text.replace(/(\d)(AM|PM)/g, '$1 $2');
-}
-
 function buildCard(s,q){
-  var igUrl = IG_HANDLES[s.place] || null;
-  var logoUrl = s.logo || LOGOS[s.place] || null;
-  var logoImg = logoUrl ? '<img class="sp-logo" src="'+logoUrl+'" alt="'+s.place+'">' : '';
-  var igBtn = igUrl ? '<a class="sp-ig" href="'+igUrl+'" target="_blank" title="Instagram">'+IG_SVG+'</a>' : '';
+  var igUrl = IG_HANDLES[s.place]||null;
+  var logoUrl = s.logo||LOGOS[s.place]||null;
+  var logoImg = logoUrl?'<img class="sp-logo" src="'+logoUrl+'" alt="'+s.place+'">':'';
+  var igBtn = igUrl?'<a class="sp-ig" href="'+igUrl+'" target="_blank" title="Instagram">'+IG_SVG+'</a>':'';
   var placeHtml = '<span class="sp-place">'+highlight(s.place,q)+'</span>';
   var deals = s.deals.map(function(d){return '<div class="sp-deal-item"><div class="sp-bullet"></div><div>'+highlight(formatTime(d),q)+'</div></div>';}).join('');
   return '<div class="sp-card"><div class="sp-card-header"><div style="display:flex;align-items:center;gap:6px;flex:1;min-width:0;line-height:1">'+logoImg+placeHtml+igBtn+'</div><div style="display:flex;align-items:center;flex-shrink:0"><div class="sp-badge">'+s.badge+'</div></div></div><div class="sp-deals">'+deals+'</div></div>';
 }
 
 function matches(s,q){return (s.place+' '+s.badge+' '+s.deals.join(' ')).toLowerCase().indexOf(q)!==-1}
-
 function renderDay(key){
   var list=document.getElementById('specials-list');
   list.innerHTML=(specials[key]||[]).map(function(s){return buildCard(s,'');}).join('');
 }
-
 function filterSpecials(){
   var q=document.getElementById('specials-search').value.toLowerCase().trim();
   var list=document.getElementById('specials-list');
@@ -544,7 +557,6 @@ function filterSpecials(){
   if(!found)html='<div style="text-align:center;color:#aaa;font-size:13px;padding:2rem 0">No results found for "'+q+'"</div>';
   list.innerHTML=html;
 }
-
 function setDay(btn,key){
   activeKey=key;
   document.getElementById('specials-search').value='';
@@ -552,9 +564,7 @@ function setDay(btn,key){
   btn.classList.add('active');
   renderDay(key);
 }
-
 document.getElementById('specials-search').addEventListener('input',filterSpecials);
-
 function toggleMenu(){
   var h=document.getElementById('hamburger');
   var m=document.getElementById('mobile-menu');
@@ -565,13 +575,11 @@ function closeMenu(){
   document.getElementById('hamburger').classList.remove('open');
   document.getElementById('mobile-menu').classList.remove('open');
 }
-
 window.addEventListener('scroll',function(){
   var btt=document.getElementById('btt');
   if(window.scrollY>400)btt.classList.add('visible');
   else btt.classList.remove('visible');
 });
-
 var dayKeys=['sun','mon','tue','wed','thu','fri','sat'];
 var todayKey=dayKeys[new Date().getDay()];
 var todayTabIdx=DAY_KEYS.indexOf(todayKey);
