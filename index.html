@@ -52,11 +52,18 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
 .btn-primary{background:var(--blue);color:#fff;font-size:13px;font-weight:600;padding:9px 22px;border-radius:20px;border:none;cursor:pointer;text-decoration:none}
 .btn-outline{background:transparent;color:#fff;font-size:13px;font-weight:500;padding:9px 22px;border-radius:20px;border:1.5px solid rgba(255,255,255,.4);cursor:pointer;text-decoration:none}
 .btn-outline:hover{border-color:#fff}
-.wave{height:14px;overflow:hidden;position:relative;flex-shrink:0}
-.wave svg{display:block;width:200%;height:100%;animation:wave-scroll 3s linear infinite}
-@keyframes wave-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.wave{height:48px;overflow:hidden;position:relative;flex-shrink:0}
 .wave-green{background:var(--dark)}
 .wave-blue{background:var(--green)}
+.wave-inner{position:relative;width:100%;height:100%}
+.wave-layer{position:absolute;bottom:0;left:0;width:200%;height:100%}
+.wave-layer svg{display:block;width:100%;height:100%}
+.wave-layer-a{animation:waveA 4s linear infinite}
+.wave-layer-b{animation:waveB 6s linear infinite;opacity:0.6}
+.wave-layer-c{animation:waveC 9s linear infinite;opacity:0.35}
+@keyframes waveA{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes waveB{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+@keyframes waveC{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .sec{padding:2rem 20px}
 .sec-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
 .sec-title{font-size:22px;font-weight:700;color:var(--dark);margin-bottom:1.5rem}
@@ -166,10 +173,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
 </div>
 
 <div class="wave wave-green">
-  <svg viewBox="0 0 1440 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,7 C120,14 240,0 360,7 C480,14 600,0 720,7 C840,14 960,0 1080,7 C1200,14 1320,0 1440,7 L1440,14 L0,14 Z" fill="#6CD94A"/>
-    <path d="M1440,7 C1320,14 1200,0 1080,7 C960,14 840,0 720,7 C600,14 480,0 360,7 C240,14 120,0 0,7 L0,14 L1440,14 Z" fill="#5BC8F5" opacity="0.6"/>
-  </svg>
+  <div class="wave-inner">
+    <div class="wave-layer wave-layer-a"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,24 C180,48 360,0 540,24 C720,48 900,0 1080,24 C1260,48 1440,0 1440,24 L1440,48 L0,48 Z" fill="#6CD94A"/></svg></div>
+    <div class="wave-layer wave-layer-b"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,28 C160,8 320,44 480,28 C640,8 800,44 960,28 C1120,8 1280,44 1440,28 L1440,48 L0,48 Z" fill="#5BC8F5"/></svg></div>
+    <div class="wave-layer wave-layer-c"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C200,14 400,46 600,32 C800,14 1000,46 1200,32 C1320,20 1400,38 1440,32 L1440,48 L0,48 Z" fill="#6CD94A"/></svg></div>
+  </div>
 </div>
 
 <div class="sec" id="memes">
@@ -181,7 +189,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   </div>
   <div class="meme-grid">
     <div class="meme-card">
-      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVjTV3NjrH7/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;margin:0;padding:0;width:100%;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DW4T41rDupq/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;margin:0;padding:0;width:100%;"></blockquote>
     </div>
     <div class="meme-card">
       <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DVrq_BIjrci/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;margin:0;padding:0;width:100%;"></blockquote>
@@ -293,10 +301,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
 </div>
 
 <div class="wave wave-blue">
-  <svg viewBox="0 0 1440 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,7 C120,14 240,0 360,7 C480,14 600,0 720,7 C840,14 960,0 1080,7 C1200,14 1320,0 1440,7 L1440,14 L0,14 Z" fill="#5BC8F5"/>
-    <path d="M1440,7 C1320,14 1200,0 1080,7 C960,14 840,0 720,7 C600,14 480,0 360,7 C240,14 120,0 0,7 L0,14 L1440,14 Z" fill="#6CD94A" opacity="0.6"/>
-  </svg>
+  <div class="wave-inner">
+    <div class="wave-layer wave-layer-a"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,24 C180,48 360,0 540,24 C720,48 900,0 1080,24 C1260,48 1440,0 1440,24 L1440,48 L0,48 Z" fill="#5BC8F5"/></svg></div>
+    <div class="wave-layer wave-layer-b"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,28 C160,8 320,44 480,28 C640,8 800,44 960,28 C1120,8 1280,44 1440,28 L1440,48 L0,48 Z" fill="#6CD94A"/></svg></div>
+    <div class="wave-layer wave-layer-c"><svg viewBox="0 0 1440 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C200,14 400,46 600,32 C800,14 1000,46 1200,32 C1320,20 1400,38 1440,32 L1440,48 L0,48 Z" fill="#5BC8F5"/></svg></div>
+  </div>
 </div>
 
 <div style="background:var(--dark);padding:14px 20px;border-top:3px solid var(--green);border-bottom:3px solid var(--blue);display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:center;justify-items:center">
@@ -409,6 +418,7 @@ var IG_HANDLES = {
   "Shine's":"https://www.instagram.com/shinesbar/",
   "Swingbelly's":"https://www.instagram.com/swingbellyslongbeach/",
   "The Buoy Bar":"https://www.instagram.com/thebuoybar/",
+  "The Merrow":"https://www.instagram.com/themerrowlbny/",
   "The Inn":"https://www.instagram.com/theinnlbny/",
   "The Saloon":"https://www.instagram.com/thesaloonlb/",
   "Toast":"https://www.instagram.com/toastcoffeeandkitchen/",
@@ -505,6 +515,7 @@ var specials = {
     {place:"Minnesota's",badge:"NFL Football",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["Unlimited items from the Tailgate Menu during the duration of select games for $44.95",RED+"Available only during the NFL football season"+END]},
     {place:"Roc and Olive",badge:"Thirsty Thursday",logo:"https://i.imgur.com/Q6dEAyW.jpeg",deals:["$25 select bottles of wine","Or 25% off entire wine bottle list"]},
     {place:"The Saloon",badge:"Prime Rib Night",logo:"https://i.imgur.com/ajwzzOP.jpeg",deals:["Prime rib with soup or salad and choice of side","Half-off bottles of wine with dinner"]},
+    {place:"Shine's",badge:"Trivia Night",logo:"https://i.imgur.com/y44HdWm.jpeg",deals:["Trivia Night on Thursdays starting at 8 PM"]},
     {place:"Shore House",badge:"Burger Night",logo:"https://i.imgur.com/9sf7oTR.jpeg",deals:["$15 burger and a beer deal: double smashed patties, bacon, cheese, lettuce, tomato, red onion and signature sauce","Includes choice of select canned beers or 8oz draft beer"]},
     {place:"The Merrow",badge:"Extended Happy Hour",deals:["Extended happy hour runs an extra hour on Thursdays","Happy hour from 5 PM to 9 PM includes the following drinks: $10 mixed drinks, $10 signature cocktail of the month, $6 select draft beer, $6 all canned beer, $9 glasses of wine","Happy hour food menu also includes (all $10): whipped ricotta, beef empanadas, wagyu beef sliders, blistered shishito peppers, sriracha cauliflower, mac and cheese bites, bang bang shrimp tacos"]},
     {place:"Swingbelly's",badge:"Cans and Ribs Night",logo:"https://i.imgur.com/O7Ieazr.jpeg",deals:["All cans $4, orders of rib tips $4"]}
@@ -536,6 +547,7 @@ var specials = {
     {place:"Cabana",badge:"Bottomless Brunch",deals:["Two-hour bottomless brunch 12-3 PM, $35.99 per person"]},
     {place:"Canz",badge:"Brunch",deals:["$19.99 brunch buffet","Optional $10 bottomless mimosas or $15 bottomless with any regular menu item (non buffet) from 12 to 3 PM"]},
     {place:"The Inn",badge:"Summer and NFL",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["Summer Sundays: $5 Michelob ULTRA, $6 Kona Big Wave, $7 NUTRL Seltzers, live music","NFL Sundays: $4 Coors Light, $5 Fireball shots, $6 NUTRL Seltzers, 75 cent wings, game day menu",RED+"NFL special only available during NFL season"+END]},
+    {place:"J.A. Heneghan's Tavern",badge:"Irish Brunch",deals:["Tea & Tunes Irish Brunch on Sundays","Includes Irish breakfast and live music"]},
     {place:"Jetty",badge:"Brunch",deals:["Boozy brunch 12-3 PM"]},
     {place:"Lost and Found",badge:"Brunch",logo:"https://i.imgur.com/OEARnrh.jpeg",deals:["Brunch available 11 AM-3 PM"]},
     {place:"Minnesota's",badge:"Sunday Funday",logo:"https://i.imgur.com/6O8ldam.jpeg",deals:["Brunch specials all day","$5 Coronas and Corona Premier"]},
