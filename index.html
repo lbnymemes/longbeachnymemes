@@ -58,7 +58,9 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
 .wave-inner{position:relative;width:100%;height:100%}
 .wave-layer{position:absolute;bottom:0;left:0;width:200%;height:100%}
 .wave-layer svg{display:block;width:100%;height:100%}
-@keyframes waveScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes wv1{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes wv2{0%{transform:translateX(-25%)}100%{transform:translateX(-75%)}}
+@keyframes wv3{0%{transform:translateX(-10%)}100%{transform:translateX(-60%)}}
 .sec{padding:2rem 20px}
 .sec-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
 .sec-title{font-size:22px;font-weight:700;color:var(--dark);margin-bottom:1.5rem}
@@ -169,9 +171,9 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
 
 <div class="wave wave-green">
   <div class="wave-inner">
-    <div class="wave-layer" style="animation:waveScroll 5s linear infinite"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24 C1680,48 1920,0 2160,24 C2400,48 2640,0 2880,24 L2880,48 L0,48 Z" fill="#6CD94A"/></svg></div>
-    <div class="wave-layer" style="animation:waveScroll 8s linear infinite reverse;opacity:0.55"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C240,8 480,44 720,32 C960,8 1200,44 1440,32 C1680,8 1920,44 2160,32 C2400,8 2640,44 2880,32 L2880,48 L0,48 Z" fill="#5BC8F5"/></svg></div>
-    <div class="wave-layer" style="animation:waveScroll 12s linear infinite;opacity:0.3"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,38 C360,18 720,46 1080,38 C1440,18 1800,46 2160,38 C2400,24 2640,42 2880,38 L2880,48 L0,48 Z" fill="#6CD94A"/></svg></div>
+    <div class="wave-layer" style="animation:wv1 5s linear infinite"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24 C1680,48 1920,0 2160,24 C2400,48 2640,0 2880,24 L2880,48 L0,48 Z" fill="#6CD94A"/></svg></div>
+    <div class="wave-layer" style="animation:wv2 8s linear infinite;opacity:0.55"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C240,8 480,44 720,32 C960,8 1200,44 1440,32 C1680,8 1920,44 2160,32 C2400,8 2640,44 2880,32 L2880,48 L0,48 Z" fill="#5BC8F5"/></svg></div>
+    <div class="wave-layer" style="animation:wv3 12s linear infinite;opacity:0.3"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,38 C360,18 720,46 1080,38 C1440,18 1800,46 2160,38 C2400,24 2640,42 2880,38 L2880,48 L0,48 Z" fill="#6CD94A"/></svg></div>
   </div>
 </div>
 
@@ -297,9 +299,9 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
 
 <div class="wave wave-blue">
   <div class="wave-inner">
-    <div class="wave-layer" style="animation:waveScroll 5s linear infinite"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24 C1680,48 1920,0 2160,24 C2400,48 2640,0 2880,24 L2880,48 L0,48 Z" fill="#5BC8F5"/></svg></div>
-    <div class="wave-layer" style="animation:waveScroll 8s linear infinite reverse;opacity:0.55"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C240,8 480,44 720,32 C960,8 1200,44 1440,32 C1680,8 1920,44 2160,32 C2400,8 2640,44 2880,32 L2880,48 L0,48 Z" fill="#6CD94A"/></svg></div>
-    <div class="wave-layer" style="animation:waveScroll 12s linear infinite;opacity:0.3"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,38 C360,18 720,46 1080,38 C1440,18 1800,46 2160,38 C2400,24 2640,42 2880,38 L2880,48 L0,48 Z" fill="#5BC8F5"/></svg></div>
+    <div class="wave-layer" style="animation:wv1 5s linear infinite"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,24 C240,48 480,0 720,24 C960,48 1200,0 1440,24 C1680,48 1920,0 2160,24 C2400,48 2640,0 2880,24 L2880,48 L0,48 Z" fill="#5BC8F5"/></svg></div>
+    <div class="wave-layer" style="animation:wv2 8s linear infinite;opacity:0.55"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,32 C240,8 480,44 720,32 C960,8 1200,44 1440,32 C1680,8 1920,44 2160,32 C2400,8 2640,44 2880,32 L2880,48 L0,48 Z" fill="#6CD94A"/></svg></div>
+    <div class="wave-layer" style="animation:wv3 12s linear infinite;opacity:0.3"><svg viewBox="0 0 2880 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,38 C360,18 720,46 1080,38 C1440,18 1800,46 2160,38 C2400,24 2640,42 2880,38 L2880,48 L0,48 Z" fill="#5BC8F5"/></svg></div>
   </div>
 </div>
 
@@ -469,6 +471,7 @@ var specials = {
     {place:"Billy's Beach Cafe",badge:"Taco Tuesday",deals:["Taco Tuesdays 5-11 PM","$5 Coronas and Cuervo Gold Margaritas","Jalapeno poppers, nachos, tacos, quesadillas, Mexican burger sliders all $8"]},
     {place:"Brixx and Barley",badge:"Taqueria Tuesday",deals:["Taqueria Tuesdays starting at 5 PM","Special taqueria-style menu and small plate chef specials","$7 margaritas, $5 Coronas"]},
     {place:"Cabana",badge:"Taco Tuesday",deals:["$1 tacos all day and night","Two-drink minimum"]},
+    {place:"Canz",badge:"Taco Tuesday",deals:["2 for $5: traditional beef, blackened chicken, grilled veggie","2 for $10: baja crispy fish, baja grilled fish","$12: queso and chips, guac and chips","$25 pitchers: margaritas (blood orange, prickly pear, mango, lime, strawberry), sangria (white or red)","$7 1800 mixed drinks, $7 margaritas, $7 sangria"]},
     {place:"Corazon de Cuba Taqueria",badge:"Taco Tuesday",deals:["$3 tacos: pescadito, pollito, al pastor, carnitas (grandma's recipe), chorizo, carne asada, vegan, hongos, al pastor cauliflower"]},
     {place:"Gino's",badge:"Double Rewards",deals:["All reward points earned are doubled on Tuesdays"]},
     {place:"The Inn",badge:"Tacos and Tequila",logo:"https://i.imgur.com/Ce9jiJl.jpeg",deals:["$2 hard or soft shell tacos: chicken, beef, pinto bean, or black bean","$5 Coronas and Corona Lights","$4 house tequilas, $5 Milagros, $6 Dos Hombres"]},
