@@ -63,6 +63,8 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:10px 2
 .meme-grid{display:flex;overflow-x:auto;gap:12px;scrollbar-width:none;padding-bottom:4px;scroll-snap-type:x mandatory}
 .meme-grid::-webkit-scrollbar{display:none}
 .meme-card{border-radius:10px;overflow:hidden;background:#fff;position:relative;cursor:pointer;flex:0 0 80vw;max-width:340px;scroll-snap-align:start}
+.meme-card .instagram-media{min-width:0!important}
+.meme-card iframe{display:block}
 .meme-footer{margin-top:1.25rem;text-align:center}
 .ig-btn{display:inline-block;background:var(--blue);color:#fff;font-size:13px;font-weight:600;padding:10px 26px;border-radius:20px;text-decoration:none}
 .shop-sec{background:#f0faf5}
@@ -139,7 +141,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
     <a href="#memes">Memes</a>
     <a href="#specials">Specials</a>
     <a href="https://www.instagram.com/stories/highlights/18455347402039044/" target="_blank" class="green">This Week in LB</a>
-    <a href="#shop">Shop</a>
+    <a href="#specials">Shop</a>
   </div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -150,7 +152,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   <a href="#memes" onclick="closeMenu()">Memes</a>
   <a href="#specials" onclick="closeMenu()">Specials</a>
   <a href="https://www.instagram.com/stories/highlights/18455347402039044/" target="_blank" onclick="closeMenu()">This Week in LB</a>
-  <a href="#shop" onclick="closeMenu()">Shop</a>
+  <a href="#specials" onclick="closeMenu()">Shop</a>
 </div>
 
 <div class="hero-banner-wrap">
@@ -235,6 +237,53 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   </div>
   <div class="specials-list" id="specials-list"></div>
   <div class="specials-cta">Are you a local spot? <a href="mailto:longbeachnymemes@gmail.com">Get Listed Free &rarr;</a></div>
+
+  <div style="margin-top:2rem;border-top:2px solid #e8f5fd;padding-top:2rem">
+    <div class="sec-label">official merch</div>
+    <div class="sec-title">The LB Shop</div>
+    <div class="product-grid">
+      <a class="product-card" href="https://www.etsy.com/listing/4477069235/a-fine-beach-town-t-shirt" target="_blank">
+        <div class="product-thumb"><img src="https://i.etsystatic.com/33462033/r/il/8fc31c/8192440141/il_1000x1000.8192440141_j623.jpg" alt="A Fine Beach Town T-Shirt"></div>
+        <div class="product-info">
+          <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="product-tag">New</div>
+          <div class="product-name">A Fine Beach Town T-Shirt</div>
+          <div class="product-price">$30.00</div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/listing/4499758363/a-fine-beach-town-16-ounce-can-glass" target="_blank">
+        <div class="product-thumb"><img src="https://i.etsystatic.com/33462033/r/il/64cd77/8071201926/il_1588xN.8071201926_dfxh.jpg" alt="A Fine Beach Town 16oz Glass"></div>
+        <div class="product-info">
+          <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="product-tag">New</div>
+          <div class="product-name">A Fine Beach Town 16oz Glass</div>
+          <div class="product-price"></div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/listing/4499810528/lbny-tie-dye-skull-towel" target="_blank">
+        <div class="product-thumb"><img src="https://i.etsystatic.com/33462033/r/il/2e35fb/8034382219/il_1000x1000.8034382219_8stv.jpg" alt="LBNY Tie Dye Skull Towel"></div>
+        <div class="product-info">
+          <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="product-tag">New</div>
+          <div class="product-name">LBNY Tie Dye Skull Towel</div>
+          <div class="product-price"></div>
+        </div>
+      </a>
+      <a class="product-card" href="https://www.etsy.com/listing/4529554742/a-fine-beach-town-tank-top" target="_blank">
+        <div class="product-thumb"><img src="https://i.etsystatic.com/33462033/r/il/12064b/8189830074/il_800x800.8189830074_shed.jpg" alt="A Fine Beach Town Tank Top"></div>
+        <div class="product-info">
+          <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="product-tag">New</div>
+          <div class="product-name">A Fine Beach Town Tank Top</div>
+          <div class="product-price"></div>
+        </div>
+      </a>
+    </div>
+    <div class="etsy-cta">
+      <a class="etsy-btn" href="https://www.etsy.com/shop/LongBeachNYmemesShop" target="_blank">Browse All on Etsy</a>
+    </div>
+  </div>
+
   <div style="margin-top:2.5rem;border-top:2px solid #e8f5fd;padding-top:2rem">
     <div class="sec-label">got a special?</div>
     <div class="sec-title" style="margin-bottom:.5rem">Submit a Special</div>
@@ -250,51 +299,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.5);text-align:center;paddi
   </svg>
 </div>
 
-<div class="sec shop-sec" id="shop">
-  <div class="sec-label">official merch</div>
-  <div class="sec-title">The LB Shop</div>
-  <div class="product-grid">
-    <a class="product-card" href="https://www.etsy.com/listing/4477069235/a-fine-beach-town-t-shirt" target="_blank">
-      <div class="product-thumb"><img src="https://i.etsystatic.com/33462033/r/il/6ba2b0/7886773073/il_794xN.7886773073_opfa.jpg" alt="A Fine Beach Town T-Shirt"></div>
-      <div class="product-info">
-        <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="product-tag">New</div>
-        <div class="product-name">A Fine Beach Town T-Shirt</div>
-        <div class="product-price">$30.00</div>
-      </div>
-    </a>
-    <a class="product-card" href="https://www.etsy.com/listing/1618823293/long-beach-noon-3x5-beach-flag" target="_blank">
-      <div class="product-thumb"><img src="https://i.etsystatic.com/33462033/r/il/276f22/5537715848/il_1588xN.5537715848_61ws.jpg" alt="LBNY High Noon Flag"></div>
-      <div class="product-info">
-        <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="product-tag">Fan Fave</div>
-        <div class="product-name">LBNY High Noon Flag 3x5</div>
-        <div class="product-price">$20.00</div>
-      </div>
-    </a>
-    <a class="product-card" href="https://www.etsy.com/listing/1782978409/long-beach-a-fine-beach-town-3x5-flag" target="_blank">
-      <div class="product-thumb"><img src="https://i.etsystatic.com/33462033/r/il/9f9924/6266420369/il_1588xN.6266420369_forl.jpg" alt="A Fine Beach Town Flag"></div>
-      <div class="product-info">
-        <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="product-tag">Best Seller</div>
-        <div class="product-name">A Fine Beach Town Flag 3x5</div>
-        <div class="product-price">$20.00</div>
-      </div>
-    </a>
-    <a class="product-card" href="https://www.etsy.com/listing/1677786428/lbny-west-end-drinking-team-blue-coolie" target="_blank">
-      <div class="product-thumb"><img src="https://i.etsystatic.com/33462033/r/il/2f8cd9/5822967032/il_1588xN.5822967032_phak.jpg" alt="West End Drinking Team Coolie"></div>
-      <div class="product-info">
-        <div class="product-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="product-tag">Popular</div>
-        <div class="product-name">West End Drinking Team Coolie</div>
-        <div class="product-price">$5.00</div>
-      </div>
-    </a>
-  </div>
-  <div class="etsy-cta">
-    <a class="etsy-btn" href="https://www.etsy.com/shop/LongBeachNYmemesShop" target="_blank">Browse All on Etsy</a>
-  </div>
-</div>
+<div class="sec" id="shop" style="display:none"></div>
 
 <div class="wave wave-blue">
   <svg viewBox="0 0 1440 14" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
